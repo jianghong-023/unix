@@ -74,4 +74,24 @@ int main(int argc ,char **argv)
  *
  * 当然可以改变描述的大小,用命令 ulimit -n  2048
  * 在函数中也可用ulimit(int cmd, long newlimit) 去改变设置
+ *
+ * open 函数的功能：
+ * 它可以创建文件或者打开一个文件
+ *
+ * 下面对open函数原型的参数进行罗列的说明一下
+ * int open(const char *pathname, int flags);
+ * int open(const char *pathname, int flags, mode_t mode);
+ *
+ * int openat(int dirfd, const char *pathname, int flags);
+ * int openat(int dirfd, const char *pathname, int flags, mode_t mode);
+ *
+ * pathname是要打开或创建的文件的名字
+ * oflag参数可用来说明此函数的多个选择项的行为
+ * O_RDONLY 只读打开
+ * O_WRONLY 只写打开
+ * O_RDWR 读、写打开
+ *
+ * 注意;很多实现将 O_RDONLY定义为0，O_WRONLY定义为1，O_RDWR定义为2th
+ *
+ *
  * ***/
