@@ -1,0 +1,51 @@
+刚接触github，遇到一个代码上传的问题。
+
+废话不多说
+
+1. 在网站注册帐号，创建工程 unix 进入工程，右下角会有一个项目仓库的地址。https://github.com/jianghong-023/unix.git
+
+2.Linux下 安装github
+
+sudo apt -get install git git-core git-doc
+
+3.  创建rsa公钥
+
+ssh-keygen -t rsa -C "jianghong_023@163.com"
+
+整个过程中有一个需要填密码
+
+然后后进入~/.ssh目录 找到公钥id_rsa.pub
+
+记事本打开复制文字
+
+进入github.com中的的设置，找到pubkey选项，填入公钥。
+
+命题随便填
+
+4. 设置账户信息
+
+git config --global user.name "jianghong-023"
+
+git config --global user.email "jianghong_023@163.com"
+
+5. 测试链接：
+    ssh -T git@github.com
+
+如果有you’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成链接
+
+接下来上传：
+
+git init
+
+git add .                    #如果是.表示上传全部目录下的文件，可以是某个文件
+
+git commit -m 'version 1.0'
+
+git remote add origin https://github.com/jianghong-023/unix.git
+
+
+git push origin master -f
+
+
+ok ！ 你的代码上传成功!
+

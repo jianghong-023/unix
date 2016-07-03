@@ -1,0 +1,32 @@
+
+1.在github 上建立项目
+2.进入你要准备上传的目录pthread,在本地(pthread目录下)
+3.pthread# git init
+4.git add .
+5.添加信息
+pthread# git commit -m "pthread"
+[master (root-commit) 96aca6c] pthread
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.c
+ 
+6.git remote add origin https://github.com/jianghong-023/unix.git
+
+
+新建一个分支： git branch pthread
+7.切换到你的新分支: git checkout pthread
+8.确定是否真的切换在pthread分支下： git branch -a 
+  io
+  master
+* pthread
+  remotes/origin/io
+  remotes/origin/master
+  remotes/origin/pthread
+ 
+ 9. 将新分支发布在github上：git push -f origin pthread
+	需要加一个-f不然有可能发布不成功
+
+
+ 提交 everything up-to-date 出现这个提示
+ 多数是没有对上传时做出说明，应该用命令:
+ git commit -m 'pthrad'
+ 
